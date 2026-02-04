@@ -1,16 +1,128 @@
-# React + Vite
+# 📊 InsightDash — Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern **Analytics Dashboard** built with **Vite + React + Tailwind CSS**.
 
-Currently, two official plugins are available:
+> UI‑first project focused on clean layout, theming (Dark / Light), and scalable dashboard architecture — ready for real API integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🌗 **Dark / Light mode** (class‑based, persistent)
+* ⚡ **Vite + React** for fast development
+* 🎨 **Tailwind CSS** for scalable UI styling
+* 🧩 Modular architecture (charts, filters, KPI, tables)
+* 📐 Responsive dashboard layout
+* 🛠 Clean separation of `app / pages / components / utils`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Tech Stack
+
+* **Frontend:** React 18, Vite
+* **Styling:** Tailwind CSS
+* **State:** React hooks
+* **Build:** Vite
+* **Linting:** ESLint
+
+---
+
+## 📁 Project Structure
+
+```
+insightdash-analytics-dashboard/
+├─ public/
+├─ src/
+│  ├─ app/
+│  │  └─ AppShell.jsx
+│  ├─ pages/
+│  │  └─ Dashboard.jsx
+│  ├─ components/
+│  │  ├─ charts/
+│  │  ├─ filters/
+│  │  ├─ kpi/
+│  │  ├─ table/
+│  │  └─ ui/
+│  ├─ data/
+│  ├─ utils/
+│  ├─ index.css
+│  └─ main.jsx
+├─ index.html
+├─ tailwind.config.js
+├─ postcss.config.js
+├─ vite.config.js
+└─ package.json
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 2️⃣ Run development server
+
+```bash
+npm run dev
+```
+
+### 3️⃣ Open in browser
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🌗 Dark / Light Theme
+
+* Class‑based theming via `html.dark`
+* User preference stored in `localStorage`
+* Toggle available globally in `AppShell`
+
+---
+
+## 🎯 Roadmap
+
+* [x] Project scaffold (Vite + React)
+* [x] Tailwind setup
+* [x] AppShell layout
+* [x] Dark / Light mode
+* [ ] KPI cards
+* [ ] Charts (Recharts)
+* [ ] Data table with sorting & filters
+* [ ] URL‑based filter state
+* [ ] API integration
+* [ ] Screenshots & live demo
+
+---
+
+## 📸 Screenshots
+
+> Coming soon
+
+---
+
+## 💡 Purpose
+
+This project is designed as:
+
+* a **portfolio‑ready dashboard UI**
+* a base for **real analytics products**
+* a clean example of **modern React + Tailwind architecture**
+
+---
+
+## 📜 License
+
+MIT
+
+---
+
+Made with ☕, focus, and attention to detail.
+
+🔙 [Back to Portfolio](https://github.com/BlladeRunner)
