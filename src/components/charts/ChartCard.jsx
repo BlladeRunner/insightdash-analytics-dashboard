@@ -13,7 +13,6 @@ export function ChartCard({ title, subtitle, children, fixed = true }) {
         ) : null}
       </header>
 
-      {/* Для графика фиксируем высоту, для таблицы — НЕ надо */}
       <div className={fixed ? "h-[260px] w-full" : "w-full"}>
         {children}
       </div>

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* ✅ ОБЯЗАТЕЛЬНО для Tailwind v4: dark: будет зависеть от класса .dark */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
