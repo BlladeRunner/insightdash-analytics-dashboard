@@ -1,9 +1,17 @@
 export default function KpiCard({ label, value, sub }) {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
-      <div className="text-xs text-slate-400">{label}</div>
-      <div className="mt-2 text-2xl font-semibold tracking-tight">{value}</div>
-      {sub ? <div className="mt-2 text-xs text-slate-500">{sub}</div> : null}
+    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/40">
+      <div className="text-xs text-slate-500 dark:text-slate-400">{label}</div>
+
+      <div className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+        {value}
+      </div>
+
+      {sub ? (
+        <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">
+          {sub}
+        </div>
+      ) : null}
     </div>
   );
 }

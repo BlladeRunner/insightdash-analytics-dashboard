@@ -6,6 +6,7 @@ import { usd } from "../utils/format";
 import KpiCard from "../components/kpi/KpiCard";
 import RevenueLine from "../components/charts/RevenueLine";
 import EventsTable from "../components/table/EventsTable";
+import { ChartCard } from "../components/charts/ChartCard";
 
 export default function Dashboard() {
   const [channel, setChannel] = useState("all");
@@ -47,8 +48,13 @@ export default function Dashboard() {
       </section>
 
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <RevenueLine data={chart} />
-        <EventsTable rows={rows} />
+        <ChartCard title="Revenue over time" subtitle="Daily revenue">
+          <RevenueLine data={chart} />
+        </ChartCard>
+
+        <ChartCard title="Events" subtitle="Sortable table" fixed={false}>
+          <EventsTable rows={rows} />
+        </ChartCard>
       </section>
     </div>
   );
