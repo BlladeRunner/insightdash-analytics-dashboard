@@ -3,15 +3,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  color-scheme: light;
-  background: #f8fafc; /* slate-50 */
-  color: #0f172a;      /* slate-900 */
+  /* ...твоё */
+  --chart-grid: rgba(15, 23, 42, 0.15);     /* slate-900 с прозрачностью */
+  --chart-axis: rgba(15, 23, 42, 0.55);
+  --chart-line: #2563eb;                    /* blue-600 */
+  --chart-tooltip-bg: rgba(255,255,255,0.95);
+  --chart-text: #0f172a;
 }
 
 html.dark {
-  color-scheme: dark;
-  background: #020617; /* slate-950 */
-  color: #f1f5f9;      /* slate-100 */
+  /* ...твоё */
+  --chart-grid: rgba(226, 232, 240, 0.18);  /* slate-200 с прозрачностью */
+  --chart-axis: rgba(226, 232, 240, 0.55);
+  --chart-line: #38bdf8;                    /* sky-400 */
+  --chart-tooltip-bg: rgba(2, 6, 23, 0.9);
+  --chart-text: #f1f5f9;
 }
 
 body {

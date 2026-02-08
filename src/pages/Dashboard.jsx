@@ -30,7 +30,10 @@ export default function Dashboard() {
           <select
             value={channel}
             onChange={(e) => setChannel(e.target.value)}
-            className="ml-3 rounded-xl border border-slate-800 bg-slate-950/40 px-3 py-2 text-sm"
+            className="ml-3 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900
+           shadow-sm outline-none
+           focus:ring-2 focus:ring-slate-200
+           dark:border-slate-800 dark:bg-slate-950/40 dark:text-slate-100 dark:focus:ring-slate-800"
           >
             <option value="all">All</option>
             <option value="web">Web</option>

@@ -1,20 +1,50 @@
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+} from "recharts";
 
 export default function RevenueLine({ data }) {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
-      <div className="text-sm font-semibold">Revenue over time</div>
-      <div className="mt-3 h-56">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis />
-            <Tooltip />
-            <Line type="monotone" dataKey="revenue" dot={false} />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+    <div className="h-[260px] w-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data} margin={{ top: 10, right: 10, bottom: 0, left: -10 }}>
+          <CartesianGrid stroke="var(--chart-grid)" strokeDasharray="3 3" />
+          <XAxis
+            dataKey="date"
+            tick={{ fill: "var(--chart-axis)" }}
+            axisLine={{ stroke: "var(--chart-grid)" }}
+            tickLine={{ stroke: "var(--chart-grid)" }}
+          />
+          <YAxis
+            tick={{ fill: "var(--chart-axis)" }}
+            axisLine={{ stroke: "var(--chart-grid)" }}
+            tickLine={{ stroke: "var(--chart-grid)" }}
+          />
+          <Tooltip
+            contentStyle={{
+              background: "var(--chart-tooltip-bg)",
+              border: "1px solid var(--chart-grid)",
+              borderRadius: 12,
+              color: "var(--chart-text)",
+            }}
+            labelStyle={{ color: "var(--chart-text)" }}
+            itemStyle={{ color: "var(--chart-text)" }}
+          />
+          <Line
+            type="monotone"
+            dataKey="revenue"
+            stroke="var(--chart-line)"
+            strokeWidth={2}
+            dot={false}
+            activeDot={{ r: 4 }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 }
